@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="crudcidade.CidadeController">
+  <children>
+    <SplitPane dividerPositions="0.4331103678929766" focusTraversable="true" prefHeight="500.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TableView fx:id="tableCidade" prefHeight="398.0" prefWidth="256.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Cidade" fx:id="columnCid" />
+                <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="55.0" text="Cep" fx:id="columnCep" />
+                <TableColumn prefWidth="75.0" text="UF" fx:id="columnUF" />
+                <TableColumn prefWidth="75.0" text="País" fx:id="paisUf" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="393.0">
+          <children>
+            <GridPane layoutX="63.0" layoutY="125.0" prefHeight="108.0" prefWidth="248.0">
+              <children>
+                <Label text="Cidade" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Cep" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="País" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="UF" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField id="CidadeBtn" fx:id="CidadeTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <TextField id="cepBtn" fx:id="cepTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField id="paisBtn" fx:id="paisTxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField id="ufBtn" fx:id="uftxt" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label layoutX="120.0" layoutY="81.0" text="Cadastro de Cidade" />
+            <Button fx:id="salvarBtn" layoutX="64.0" layoutY="324.0" mnemonicParsing="false" onAction="#cadCidade" prefWidth="56.0" text="Salvar" />
+            <Button fx:id="alterarBtn" layoutX="131.0" layoutY="324.0" mnemonicParsing="false" onAction="#flagAlt" text="Alterar" />
+            <Button fx:id="deletarBtn" layoutX="255.0" layoutY="324.0" mnemonicParsing="false" onAction="#deletar" text="Deletar" />
+            <Button fx:id="pesquisarBtn" layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#pesquisa" text="Pesquisar" />
+            <Button fx:id="novoBtn" layoutX="200.0" layoutY="324.0" mnemonicParsing="false" onAction="#flag" text="Novo" />
+            <TextField fx:id="pestxt" layoutX="31.0" layoutY="14.0" prefWidth="200.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
